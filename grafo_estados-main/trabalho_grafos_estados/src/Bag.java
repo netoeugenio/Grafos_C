@@ -1,41 +1,48 @@
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class Bag<Item> implements Iterable<Item> {
-    private Node<Item> first;    
-    private int n;               
 
+public class Bag<Item> implements Iterable<Item> {
+    private Node<Item> first; // início da lista
+    private int n;            // quantidade de elementos
+
+    // Classe interna que representa cada nó da lista
     private static class Node<Item> {
         private Item item;
         private Node<Item> next;
     }
 
+    // Construtor: inicia bag vazia
     public Bag() {
         first = null;
         n = 0;
     }
 
+    // Verifica se está vazia
     public boolean isEmpty() {
         return first == null;
     }
 
+    // Retorna quantidade de elementos
     public int size() {
         return n;
     }
 
-   
+ 
     public void add(Item item) {
         Node<Item> oldfirst = first;
-        first = new Node<Item>();
+        first = new Node<>();
         first.item = item;
         first.next = oldfirst;
         n++;
     }
 
-    public Iterator<Item> iterator()  {
+    // Permite usar for-each
+    public Iterator<Item> iterator() {
         return new LinkedIterator(first);
     }
 
+    // Iterador da lista
     private class LinkedIterator implements Iterator<Item> {
         private Node<Item> current;
 
@@ -43,8 +50,13 @@ public class Bag<Item> implements Iterable<Item> {
             current = first;
         }
 
-        public boolean hasNext()  { return current != null; }
-        public void remove()      { throw new UnsupportedOperationException(); }
+        public boolean hasNext() {
+            return current != null;
+        }
+
+        public void remove() {
+            throw new UnsupportedOperationException();
+        }
 
         public Item next() {
             if (!hasNext()) throw new NoSuchElementException();
