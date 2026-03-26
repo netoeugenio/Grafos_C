@@ -101,6 +101,7 @@ git clone https://github.com/netoeugenio/Grafos_C.git
 cd Grafos_C
 cd grafo_estados-main
 3️⃣ Entrar na pasta do código
+cd trabalho_grafos_estados
 cd src
 4️⃣ Compilar os arquivos Java
 javac *.java
