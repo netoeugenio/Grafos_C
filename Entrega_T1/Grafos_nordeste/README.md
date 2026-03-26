@@ -1,17 +1,23 @@
-#  **Grafos - Região Nordeste do Brasil**
+# Grafos - Região Nordeste do Brasil
 
-## 👥 **Grupo C**
+## 👥 Grupo C
 
-### **Integrantes**
+### Integrantes
 
-- **José Eugênio** — 2320466  
-- **Mateus Rocha Lessa** — 2410456  
-- **Carlos Huan Celestino de Brito** — 2320478  
-- **Lucas de Vasconcelos Barreira Carvalho** — 2410424  
+- José Eugênio — 2320466  
+- Mateus Rocha Lessa — 2410456  
+- Carlos Huan Celestino de Brito — 2320478  
+- Lucas de Vasconcelos Barreira Carvalho — 2410424  
 
 ---
 
-## 📌 **Sobre o Projeto**
+## Vídeo Explicativo
+
+👉 *(adicione aqui o link do vídeo de até 2 minutos)*
+
+---
+
+## 📌 Sobre o Projeto
 
 Este projeto foi desenvolvido para a disciplina de **Grafos**.
 
@@ -19,7 +25,7 @@ A proposta é modelar um grafo representando os estados da região Nordeste do B
 
 ---
 
-##  **O que representa o grafo**
+## O que representa o grafo
 
 Neste problema:
 
@@ -30,45 +36,33 @@ Ou seja, se dois estados fazem fronteira, existe uma aresta conectando eles no g
 
 ---
 
-## ⚙️ **Estrutura do Projeto**
+## ⚙️ Estrutura do Projeto
 
 A implementação foi feita em **Java**, utilizando lista de adjacência.
 
-As principais classes são:
-
-### **Graph**
+### Graph
 Responsável por representar o grafo, armazenando:
 - número de vértices  
 - número de arestas  
 - lista de adjacência (vizinhos de cada estado)  
 
----
+### DepthFirstPaths (DFS)
+- verifica conectividade  
+- encontra caminhos no grafo  
 
-### **DepthFirstPaths (DFS)**
-Implementa a busca em profundidade, utilizada para:
-- verificar conectividade  
-- encontrar caminhos no grafo  
+### BreadthFirstPaths (BFS)
+- encontra o menor caminho entre dois estados  
 
----
-
-### **BreadthFirstPaths (BFS)**
-Implementa a busca em largura, utilizada para:
-- encontrar o menor caminho entre dois estados  
-
----
-
-### **Main**
-Classe principal responsável por:
-- ler o arquivo com os dados do grafo  
-- receber o estado inicial e destino  
+### Main
+Responsável por:
+- ler o arquivo do grafo  
+- receber entrada do usuário  
 - executar DFS e BFS  
 - exibir os resultados  
 
 ---
 
-## 📂 **Arquivo de Entrada**
-
-O grafo é construído a partir do arquivo:
+## 📂 Arquivo de Entrada
 
 ```
 dados/nordeste.txt
@@ -90,21 +84,21 @@ Formato:
 
 ---
 
-## ▶️ **Como executar**
+## ▶️ Como executar
 
-### 1️⃣ Acessar a pasta do projeto
+### 1️⃣ Entrar na pasta
 
 ```
 cd src
 ```
 
-### 2️⃣ Compilar os arquivos
+### 2️⃣ Compilar
 
 ```
 javac *.java
 ```
 
-### 3️⃣ Executar o programa
+### 3️⃣ Executar
 
 ```
 java Main
@@ -112,7 +106,7 @@ java Main
 
 ---
 
-## 💻 **Funcionamento**
+## 💻 Funcionamento
 
 O programa solicita:
 
@@ -121,17 +115,9 @@ O programa solicita:
 
 E retorna:
 
-- Se existe caminho entre os estados  
-- Caminho encontrado com DFS  
-- Caminho encontrado com BFS  
+- Se existe caminho  
+- Caminho com DFS  
+- Caminho com BFS  
 - Estados alcançáveis  
-- Ordem de visita do DFS  
-- Ordem de visita do BFS  
-
----
-
-## 🎥 **Vídeo Explicativo**
-
-Link do vídeo com a explicação da solução (2 minutos):
-
-👉 *(adicione aqui o link do vídeo)*
+- Ordem de visita DFS  
+- Ordem de visita BFS  
