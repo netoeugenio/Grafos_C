@@ -89,6 +89,7 @@ Formato:
 ### 1️⃣ Entrar na pasta
 
 ```
+cd Grafos_nordeste
 cd src
 ```
 
